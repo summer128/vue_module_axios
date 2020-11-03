@@ -19,13 +19,13 @@ export default {
   methods:{
     async getLists(){
       // 方法二（调取数据）
-      let getRes  = await axios.get(`${resquest}`+ '/web/getNewsList?type=news_report&page=0&limit=10')
-      console.log(getRes)
+      // let getRes  = await axios.get(`${resquest}`+ '/web/getNewsList?type=news_report&page=0&limit=10')
+      // console.log(getRes)
       
       // 方法一（调取数据）
-      // getListAPI().then(res => console.log(res)).catch(err => console.log(err))
-      // let getRes  = await getListAPI('resquest'+ '/web/getNewsList?type=news_report&page=0&limit=10')
-      // console.log(getRes)
+      getListAPI().then(res => console.log(res)).catch(err => console.log(err))
+      let getRes  = await getListAPI('resquest'+ '/web/getNewsList?type=news_report&page=0&limit=10')
+      console.log(getRes)
     }
   },
   created(){
